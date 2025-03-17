@@ -1,0 +1,199 @@
+:root {
+  /* Light theme variables */
+  --primary-color: #3498db;
+  --primary-hover: #2980b9;
+  --secondary-color: #28a745;
+  --secondary-hover: #218838;
+  --danger-color: #dc3545;
+  --danger-hover: #c82333;
+  --background-color: #f8f9fa;
+  --card-background: #ffffff;
+  --text-color: #333333;
+  --text-secondary: #6c757d;
+  --border-color: #dee2e6;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --input-background: #ffffff;
+  --header-background: #f1f1f1;
+  --table-header-bg: #f8f9fa;
+  --table-stripe-bg: #f2f2f2;
+  --table-hover-bg: #e9ecef;
+  --disabled-color: #adb5bd;
+  --modal-overlay: rgba(0, 0, 0, 0.5);
+  --loading-border: #f3f3f3;
+  --loading-color: #3498db;
+}
+
+.dark-theme {
+  /* Dark theme variables */
+  --primary-color: #2196f3;
+  --primary-hover: #1976d2;
+  --secondary-color: #26a69a;
+  --secondary-hover: #00897b;
+  --danger-color: #f44336;
+  --danger-hover: #d32f2f;
+  --background-color: #121212;
+  --card-background: #1e1e1e;
+  --text-color: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --border-color: #333333;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --input-background: #2d2d2d;
+  --header-background: #1a1a1a;
+  --table-header-bg: #2d2d2d;
+  --table-stripe-bg: #262626;
+  --table-hover-bg: #333333;
+  --disabled-color: #555555;
+  --modal-overlay: rgba(0, 0, 0, 0.7);
+  --loading-border: #333333;
+  --loading-color: #2196f3;
+}
+
+/* Global styles */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* Button styles */
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  background-color: var(--disabled-color);
+  cursor: not-allowed;
+}
+
+button.danger {
+  background-color: var(--danger-color);
+}
+
+button.danger:hover {
+  background-color: var(--danger-hover);
+}
+
+button.secondary {
+  background-color: var(--secondary-color);
+}
+
+button.secondary:hover {
+  background-color: var(--secondary-hover);
+}
+
+/* Input styles */
+input,
+select {
+  background-color: var(--input-background);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 8px 12px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.25);
+}
+
+/* Card styles */
+.card {
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--card-background);
+}
+
+th {
+  background-color: var(--table-header-bg);
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+th:hover {
+  background-color: var(--table-hover-bg);
+}
+
+tr:nth-child(even) {
+  background-color: var(--table-stripe-bg);
+}
+
+tr:hover {
+  background-color: var(--table-hover-bg);
+}
+
+td {
+  padding: 12px 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+/* RTL Support */
+[dir="rtl"] .filters,
+[dir="rtl"] .actions,
+[dir="rtl"] .pagination,
+[dir="rtl"] .lang-switcher,
+[dir="rtl"] .theme-switcher {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .select-group label,
+[dir="rtl"] .input-group label {
+  text-align: right;
+}
+
+[dir="rtl"] th,
+[dir="rtl"] td {
+  text-align: right;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .user-detail,
+  .user-list {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "user-management-dashboard",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "vitest --coverage",
+    "test:ui": "vitest --ui"
+  },
+  "dependencies": {
+    "axios": "^1.8.3",
+    "file-saver": "^2.0.5",
+    "jspdf": "^3.0.0",
+    "jspdf-autotable": "^5.0.2",
+    "papaparse": "^5.5.2",
+    "pinia": "^3.0.1",
+    "vue": "^3.5.13",
+    "vue-i18n": "^11.1.2",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@pinia/testing": "^1.0.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vitest/coverage-v8": "^3.0.8",
+    "@vitest/ui": "^3.0.8",
+    "@vue/test-utils": "^2.4.6",
+    "@vue/tsconfig": "^0.7.0",
+    "autoprefixer": "^10.4.21",
+    "cypress": "^14.2.0",
+    "happy-dom": "^17.4.4",
+    "jsdom": "^26.0.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.14",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.2",
+    "vitest": "^3.0.8",
+    "vue-tsc": "^2.2.4"
+  }
+}
