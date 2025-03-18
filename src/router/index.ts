@@ -26,21 +26,21 @@ const router = createRouter({
   routes,
 });
 
-// Navigation Guards
-// router.beforeEach((to, from, next) => {
-//   const authStore = useAuthStore();
+Navigation Guards
+router.beforeEach((to, from, next) => {
+  const authStore = useAuthStore();
 
-//   if (to.meta.requiresAuth && !authStore.isAuthenticated) {
-//     next("/login");
-//   } else if (
-//     to.meta.roles &&
-//     Array.isArray(to.meta.roles) &&
-//     !to.meta.roles.includes(authStore.user?.role)
-//   ) {
-//     next("/users"); // Redirect unauthorized users
-//   } else {
-//     next();
-//   }
-// });
+  if (to.meta.requiresAuth && !authStore.isAuthenticated) {
+    next("/login");
+  } else if (
+    to.meta.roles &&
+    Array.isArray(to.meta.roles) &&
+    !to.meta.roles.includes(authStore.user?.role)
+  ) {
+    next("/users"); // Redirect unauthorized users
+  } else {
+    next();
+  }
+});
 
 export default router;
