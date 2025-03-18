@@ -3,17 +3,19 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc -b && vite build",
+    "dev": "node init && vite",
+    "build": "node init && vue-tsc -b && vite build",
     "preview": "vite preview",
     "test": "vitest --coverage",
     "test:ui": "vitest --ui"
   },
   "dependencies": {
     "axios": "^1.8.3",
+    "dotenv": "^8.2.0",
     "file-saver": "^2.0.5",
     "jspdf": "^3.0.0",
     "jspdf-autotable": "^5.0.2",
+    "node-fetch": "^3.3.2",
     "papaparse": "^5.5.2",
     "pinia": "^3.0.1",
     "vue": "^3.5.13",
